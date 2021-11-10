@@ -25,7 +25,7 @@ import javax.validation.Valid;
 import com.app.todo.user.User;
 import com.app.todo.user.UserNotAuthenticatedException;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins={ "http://localhost:3000", "http://localhost:4200", "https://cg1p-frontend.herokuapp.com"})
 @RestController
 public class TodoController {
     private TodoServiceImpl todoService;

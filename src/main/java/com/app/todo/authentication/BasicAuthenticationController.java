@@ -3,7 +3,7 @@ package com.app.todo.authentication;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins={ "http://localhost:3000", "http://localhost:4200" })
+@CrossOrigin(origins={ "http://localhost:3000", "http://localhost:4200", "https://cg1p-frontend.herokuapp.com"})
 @RestController
 @RequestMapping("/basicauth")
 public class BasicAuthenticationController {

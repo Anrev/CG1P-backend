@@ -16,7 +16,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins={ "http://localhost:3000", "http://localhost:4200", "https://cg1p-frontend.herokuapp.com"})
 @RestController
 @RequestMapping("/newsapi")
 public class NewsController {

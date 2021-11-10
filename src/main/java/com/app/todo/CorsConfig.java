@@ -18,7 +18,7 @@ public class CorsConfig {
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(false)
-                        .allowedOriginPatterns("http://localhost:4200");
+                        .allowedOriginPatterns("https://cg1p-frontend.herokuapp.com");
             }
         };
     }
