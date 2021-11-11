@@ -72,4 +72,10 @@ public class NewsController {
         String message = newsService.getTextMessage(currentNews);
         senderService.sendSms(new SmsRequest(phoneNo,message));
     }
+
+    @ApiOperation(value = "Demo email sender")
+    @PostMapping(path = "/demoEmail", produces = "application/json")
+    public void emoEmail() throws ParseException, IOException, InterruptedException {
+        getNewsv2("channelnewsasia.com,straitstimes.com", "covid+singapore","2021-11-09");
+    }
 }
