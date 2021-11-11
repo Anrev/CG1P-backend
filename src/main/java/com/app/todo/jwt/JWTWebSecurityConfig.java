@@ -85,6 +85,8 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
 
+                .antMatchers(HttpMethod.GET, "/industry/**").permitAll()
+
                 .and()
                 .csrf().disable()
                 .formLogin().disable();
