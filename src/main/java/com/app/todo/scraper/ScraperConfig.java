@@ -24,7 +24,7 @@ public class ScraperConfig {
 
 //        // For deployment
         System.setProperty("GOOGLE_CHROME_BIN", "/app/.apt/usr/bin/google-chrome");
-        System.setProperty("CHROMEDRIVER_PATH", "/app/.chromedriver/bin/chromedriver");'
+        System.setProperty("CHROMEDRIVER_PATH", "/app/.chromedriver/bin/chromedriver");
 
         // For both local and Deploy
         chromeOptions.addArguments("--headless");
