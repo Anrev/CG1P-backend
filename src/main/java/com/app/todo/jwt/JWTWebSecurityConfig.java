@@ -85,7 +85,6 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
 
-                .antMatchers(HttpMethod.GET, "/industry/**").permitAll()
 
                 .and()
                 .csrf().disable()
@@ -113,8 +112,9 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .ignoring()
                 .antMatchers(
                         HttpMethod.GET,
-                        "/" //Other Stuff You want to Ignore
+                        "/industry/**" //Other Stuff You want to Ignore
                 )
+
                 .and()
                 .ignoring()
                 .antMatchers("/h2-console/**/**");//Should not be in Production!
