@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table
@@ -32,7 +33,8 @@ public class Industry {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "industry_id", columnDefinition = "BINARY(16)")
+    @Column(name = "industry_id")
+    @Type(type = "uuid-char")
     private UUID id;
 
     @NotNull(message = "Industry name should not be null")

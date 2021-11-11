@@ -27,6 +27,7 @@ import com.fasterxml.jackson.databind.ser.std.UUIDSerializer;
 import org.hibernate.annotations.GenericGenerator;
 
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table
@@ -41,7 +42,8 @@ public class Business {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "business_id", columnDefinition = "BINARY(16)")
+    @Type(type = "uuid-char")
+    @Column(name = "business_id")
     private UUID id;
 
     // TODO: Add proper UEN validation

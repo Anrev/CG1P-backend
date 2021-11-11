@@ -24,6 +24,7 @@ import org.hibernate.annotations.GenericGenerator;
 import io.swagger.annotations.ApiModelProperty;
 
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table
@@ -40,6 +41,7 @@ public class Todo {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "todo_id")
+    @Type(type = "uuid_char")
     private UUID id;
 
     @ApiModelProperty(notes = "Owner of a todo")
