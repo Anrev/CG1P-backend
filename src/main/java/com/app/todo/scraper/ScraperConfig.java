@@ -22,9 +22,9 @@ public class ScraperConfig {
 //         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver"); // Mac
 
 
-        // For deployment
+//        // For deployment
         System.setProperty("GOOGLE_CHROME_BIN", "/app/.apt/usr/bin/google-chrome");
-        System.setProperty("CHROMEDRIVER_PATH", "/app/.chromedriver/bin/chromedriver");
+        System.setProperty("CHROMEDRIVER_PATH", "/app/.chromedr'iver/bin/chromedriver");'
 
         // For both local and Deploy
         chromeOptions.addArguments("--headless");

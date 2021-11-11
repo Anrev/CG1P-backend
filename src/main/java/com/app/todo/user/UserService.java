@@ -13,13 +13,13 @@ import java.util.UUID;
 @Service
 public class UserService {
     private UserRepository userRepository;
-    private BCryptPasswordEncoder encoder;
+    private BCryptPasswordEncoder passwordEncoderBean;
     private BusinessService businessService;
 
     @Autowired
-    public UserService(UserRepository userRepository, BCryptPasswordEncoder encoder, BusinessService businessService) {
+    public UserService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoderBean, BusinessService businessService) {
         this.userRepository = userRepository;
-        this.encoder = encoder;
+        this.passwordEncoderBean = passwordEncoderBean;
         this.businessService = businessService;
     }
 
@@ -84,7 +84,7 @@ public class UserService {
             throw new UserAlreadyRegisteredException(email);
         }
         
-        user.setPassword(encoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoderBean.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
