@@ -41,7 +41,7 @@ public class Business {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "business_id")
+    @Column(name = "business_id", columnDefinition = "BINARY(16)")
     private UUID id;
 
     // TODO: Add proper UEN validation

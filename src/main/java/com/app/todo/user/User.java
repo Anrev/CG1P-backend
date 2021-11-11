@@ -56,7 +56,7 @@ public class User implements UserDetails {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @JsonDeserialize(using= UUIDDeserializer.class)
-    @Column(name = "user_id")
+    @Column(name = "user_id", columnDefinition = "BINARY(16)")
     private UUID id;
 
     @NotNull(message = "Email should not be null")

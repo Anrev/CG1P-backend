@@ -32,7 +32,7 @@ public class Industry {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "industry_id")
+    @Column(name = "industry_id", columnDefinition = "BINARY(16)")
     private UUID id;
 
     @NotNull(message = "Industry name should not be null")
