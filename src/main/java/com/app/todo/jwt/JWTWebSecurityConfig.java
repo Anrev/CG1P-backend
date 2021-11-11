@@ -112,11 +112,18 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .ignoring()
                 .antMatchers(
                         HttpMethod.GET,
-                        "/industry/**", "/industry" //Other Stuff You want to Ignore
+                        "/business", "/business/**", "/industry/**", "/industry" //Other Stuff You want to Ignore
                 )
 
                 .and()
                 .ignoring()
-                .antMatchers("/h2-console/**/**");//Should not be in Production!
+                .antMatchers("/h2-console/**/**")//Should not be in Production!
+                .and()
+                .ignoring()
+                .antMatchers(HttpMethod.POST, "/business", "/business/**", "/industry", "/industry/**");//Should not be in Production!
+
+//                .and()
+//                .ignoring()
+//                .antMatchers("/h2-console/**/**");//Should not be in Production!
     }
 }
