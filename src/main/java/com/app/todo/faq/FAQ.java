@@ -22,7 +22,7 @@ public class FAQ {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Type(type = "uuid_char")
+    @Type(type = "uuid-char")
     private UUID Id;
     private String URL;
     private String industry;

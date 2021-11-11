@@ -41,7 +41,7 @@ public class Todo {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "todo_id")
-    @Type(type = "uuid_char")
+    @Type(type = "uuid-char")
     private UUID id;
 
     @ApiModelProperty(notes = "Owner of a todo")
